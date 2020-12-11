@@ -66,7 +66,7 @@ namespace Windows.UI.Xaml
 		}
 
 		partial void OnLoadedPartial();
-		private protected virtual void OnLoaded() { }
+		private protected virtual void OnLoaded() {  }
 
 		private protected sealed override void OnFwEltUnloaded()
 		{
@@ -75,6 +75,7 @@ namespace Windows.UI.Xaml
 				// Raise event after invoking base in order to raise them bottom to top
 				OnUnloaded();
 				_unloaded?.Invoke(this, new RoutedEventArgs(this));
+				OnUnloadedPartial();
 			}
 			catch (Exception error)
 			{
@@ -82,6 +83,7 @@ namespace Windows.UI.Xaml
 				Application.Current.RaiseRecoverableUnhandledException(error);
 			}
 		}
+		partial void OnUnloadedPartial();
 
 		private protected virtual void OnUnloaded() { }
 	}

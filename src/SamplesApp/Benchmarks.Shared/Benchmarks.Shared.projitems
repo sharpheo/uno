@@ -19,6 +19,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\BenchmarkUIHost.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Suite\SpanBench\SimpleSpanBenchmark.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\BenchmarkDotNetControl.xaml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\BenchmarkDotNetTestsPage.xaml.cs" />
