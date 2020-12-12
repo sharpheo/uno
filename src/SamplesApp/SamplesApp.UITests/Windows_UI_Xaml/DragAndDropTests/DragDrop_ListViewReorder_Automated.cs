@@ -1,5 +1,4 @@
-﻿#if false
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -22,42 +21,42 @@ namespace SamplesApp.UITests.Windows_UI_Xaml.DragAndDropTests
 
 		[Test]
 		[AutoRetry]
-		[ActivePlatforms(Platform.Android | Platform.iOS)]
+		[ActivePlatforms(Platform.Browser)]
 		public void When_Reorder_Down() => Test_Reorder(1, 3);
 
 		[Test]
 		[AutoRetry]
-		[ActivePlatforms(Platform.Android | Platform.iOS)]
+		[ActivePlatforms(Platform.Browser)]
 		public void When_Reorder_Up() => Test_Reorder(3, 1);
 
 		[Test]
 		[AutoRetry]
-		[ActivePlatforms(Platform.Android | Platform.iOS)]
+		[ActivePlatforms(Platform.Browser)]
 		public void When_Reorder_First() => Test_Reorder(0, 2);
 
 		[Test]
 		[AutoRetry]
-		[ActivePlatforms(Platform.Android | Platform.iOS)]
+		[ActivePlatforms(Platform.Browser)]
 		public void When_Reorder_Last() => Test_Reorder(5, 2);
 
 		[Test]
 		[AutoRetry]
-		[ActivePlatforms(Platform.Android | Platform.iOS)]
+		[ActivePlatforms(Platform.Browser)]
 		public void When_Reorder_To_First() => Test_Reorder(1, 0);
 
 		[Test]
 		[AutoRetry]
-		[ActivePlatforms(Platform.Android | Platform.iOS)]
+		[ActivePlatforms(Platform.Browser)]
 		public void When_Reorder_To_Last() => Test_Reorder(3, 5);
 
 		[Test]
 		[AutoRetry]
-		[ActivePlatforms(Platform.Android | Platform.iOS)]
+		[ActivePlatforms(Platform.Browser)]
 		public void When_Reorder_First_To_Last() => Test_Reorder(0, 5);
 
 		[Test]
 		[AutoRetry]
-		[ActivePlatforms(Platform.Android | Platform.iOS)]
+		[ActivePlatforms(Platform.Browser)]
 		public void When_Reorder_Last_To_First() => Test_Reorder(0, 5);
 
 		public void Test_Reorder(int from, int to)
@@ -81,4 +80,3 @@ namespace SamplesApp.UITests.Windows_UI_Xaml.DragAndDropTests
 		}
 	}
 }
-#endif
