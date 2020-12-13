@@ -1689,8 +1689,11 @@ namespace Windows.UI.Xaml
 		/// </remarks>
 		internal void EnableHardReferences()
 		{
-			_hardParentRef = Parent;
-			_hardOriginalObjectRef = ActualInstance;
+			if (FeatureConfiguration.DependencyObject.IsStoreHardReferenceEnabled)
+			{
+				_hardParentRef = Parent;
+				_hardOriginalObjectRef = ActualInstance;
+			}
 		}
 
 		/// <summary>
@@ -1698,8 +1701,11 @@ namespace Windows.UI.Xaml
 		/// </summary>
 		internal void DisableHardReferences()
 		{
-			_hardParentRef = null;
-			_hardOriginalObjectRef = null;
+			if (FeatureConfiguration.DependencyObject.IsStoreHardReferenceEnabled)
+			{
+				_hardParentRef = null;
+				_hardOriginalObjectRef = null;
+			}
 		}
 
 		/// <summary>
